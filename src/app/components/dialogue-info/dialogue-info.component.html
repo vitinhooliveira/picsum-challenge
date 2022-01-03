@@ -1,0 +1,12 @@
+<p>
+  ID: <strong>{{ data.id }}</strong>
+</p>
+<p>
+  Autor: <strong>{{ data.author }}</strong>
+</p>
+<p>
+  <img src="{{ data.img }}" width="150px" alt="" />
+</p>
+<p (click)="openWindow($event)">
+  ID: <strong id="pathLink">{{ data.img }}</strong>
+</p>

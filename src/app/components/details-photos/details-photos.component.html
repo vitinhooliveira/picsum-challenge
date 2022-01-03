@@ -1,0 +1,33 @@
+<div>
+  <h1 id="headTitle">Desafio Front-end com Angular</h1>
+</div>
+<div>
+  <mat-grid-list cols="5" rowHeight="200px">
+    <mat-grid-tile *ngFor="let img of images">
+      <img
+        id="{{ img.id }}"
+        src="{{ img.download_url }}"
+        alt="{{ img.author }}"
+        width="300"
+        height="200"
+      />
+      <mat-icon (click)="informationImg($event)">info</mat-icon>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <button
+    *ngIf="this.numberGetPhothos > 1"
+    mat-raised-button
+    (click)="previousPages()"
+    color="primary"
+  >
+    Previous
+  </button>
+  <button
+    class="bntPrevious"
+    mat-raised-button
+    (click)="NextPages()"
+    color="primary"
+  >
+    Next
+  </button>
+</div>
